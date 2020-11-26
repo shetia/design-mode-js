@@ -48,9 +48,9 @@ const shapeFactory = new ShapeFactory()
 const circle = shapeFactory.getShape('CIRCLE')
 const rectangle = shapeFactory.getShape('RECTANGLE')
 const square = shapeFactory.getShape('SQUARE')
-circle.draw()
-rectangle.draw()
-square.draw()
+// circle.draw()
+// rectangle.draw()
+// square.draw()
 
 /*
 优势:
@@ -58,3 +58,5 @@ square.draw()
 也方便日后对这个实例的修改, 比如你要修改工厂的产出是一个单例的时候, 就不需要在所有的类中修改
 而只要在工厂出入口修改即可
 */
+
+module.exports = ShapeFactory
