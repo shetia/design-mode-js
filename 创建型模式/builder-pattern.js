@@ -85,21 +85,22 @@ class Pepsi extends ColdDrink{
 
 class Meal {
   constructor(){
-    const items = []
+    // let items = []
+    this.items = []
     this.itemsName = 'items'
     /*
       为什么不同Proxy而使用defineProperty
       因为Proxy虽然实现和defineProperty类似的功能
       但是在这个场景下, 语义是定义属性, 而不是需要代理
     */
-   Reflect.defineProperty(this, 'items', {
-     get: () => {
-       if (this.__proto__ != Meal.prototype){
-         throw new Error('items is private!')
-       }
-       return items
-     }
-   })
+  //  Reflect.defineProperty(this, 'items', {
+  //    get: () => {
+  //      if (this.__proto__ != Meal.prototype){
+  //        throw new Error('items is private!')
+  //      }
+  //      return items
+  //    }
+  //  })
   }
   addItem(item){
     this[this.itemsName].push(item)
